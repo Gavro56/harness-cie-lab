@@ -103,7 +103,7 @@ pipeline:
                                                     connectorRef: githubgavro56
                                                     gitFetchType: Branch
                                                     paths:
-                                                        - harness-deploy/payment-service-dev
+                                                        - harness-deploy/values.yaml
                                                     repoName: harness-cie-lab
                                                     branch: main
                                   - manifest:
