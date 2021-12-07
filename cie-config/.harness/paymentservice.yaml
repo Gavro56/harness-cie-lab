@@ -57,7 +57,7 @@ pipeline:
                                     image: nikpap/mvn-openjdk-8:harness
                                     command: |-
                                         cd payment-service
-                                        mvn -Dmaven.test.skip=true clean install -x
+                                        mvn -Dmaven.test.skip=true clean install -X
                                     privileged: false
                                     shell: Bash
                                     resources:
