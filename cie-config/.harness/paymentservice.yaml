@@ -55,10 +55,11 @@ pipeline:
                                 spec:
                                     connectorRef: account.bootcampdockerhub
                                     image: nikpap/mvn-openjdk-8:harness
-                                    command: |
+                                    command: |-
                                         cd payment-service
                                         mvn -Dmaven.test.skip=true clean install -x
                                     privileged: false
+                                    shell: Bash
                                     resources:
                                         limits:
                                             memory: 1Gi
