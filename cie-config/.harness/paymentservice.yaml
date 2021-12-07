@@ -106,6 +106,20 @@ pipeline:
                                                         - harness-deploy/payment-service-dev
                                                     repoName: harness-cie-lab
                                                     branch: main
+                                  - manifest:
+                                        identifier: templates
+                                        type: K8sManifest
+                                        spec:
+                                            store:
+                                                type: Github
+                                                spec:
+                                                    connectorRef: githubgavro56
+                                                    gitFetchType: Branch
+                                                    paths:
+                                                        - harness-deploy/payment-service-dev
+                                                    repoName: harness-cie-lab
+                                                    branch: main
+                                            skipResourceVersioning: false
                               artifacts:
                                   primary:
                                       type: DockerRegistry
